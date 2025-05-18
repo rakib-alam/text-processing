@@ -6,16 +6,16 @@ nltk.download('punkt_tab')
 from nltk.corpus import stopwords
 nltk.download('stopwords')
 text="Hey, can u plz tell me where’s my order??”.“i didn’t receive my parcel yet!!!!”.“Whr’s my ordr 😡😡”.“delivery late af... i want refund now"
-##lowearcase
+## lowearcase
 text_lower=text.lower()
 print("Lowearcase:",text_lower)
-##wordTokenize
+## wordTokenize
 wt=word_tokenize(text)
 print("Word_Tokenize:",wt)
-#sentenceTokenize
+# sentenceTokenize
 st=sent_tokenize(text)
 print("sentence_Tokenize:",st)
-##punctuation remove
+## punctuation remove
 import re
 import nltk
 from nltk.tokenize import word_tokenize
@@ -41,11 +41,9 @@ filtered_tokens=[word for word in tokens if word.lower() not in stop_words]
 filtered_sentence=' '.join(filtered_tokens)
 print("Sentence original:",text)
 print(filtered_sentence)
-##whitespace
+## whitespace
 from nltk.tokenize import WhitespaceTokenizer
 ws = WhitespaceTokenizer()
-   
-# Use tokenize method
 wpt = ws.tokenize(text)
    
 print(wpt)
